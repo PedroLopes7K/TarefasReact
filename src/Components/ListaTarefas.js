@@ -5,7 +5,7 @@ import RenderizarTarefas from './RenderizarTarefas'
 function ListaTarefas() {
   let [tarefa, setTarefa] = useState([])
   let [novaTarefa, setNovaTarefa] = useState('')
-  const campoInserirTarefa = document.getElementsByTagName('input')[0]
+  const campoInserirTarefa = document.getElementById('inputTarefa')
 
   function formSubmit(e) {
     e.preventDefault()
@@ -27,7 +27,7 @@ function ListaTarefas() {
       <form onSubmit={formSubmit}>
         <label htmlFor="titulo">Insira uma Tarefa:</label>
         <input
-          id="titulo"
+          id="inputTarefa"
           type="text"
           value={novaTarefa}
           onChange={e => setNovaTarefa(e.target.value)}
